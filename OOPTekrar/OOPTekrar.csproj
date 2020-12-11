@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">anycpu</Platform>
+    <ProjectGuid>{B885238A-68F2-4B77-9F59-93243B4D44D7}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>OOPTekrar</RootNamespace>
+    <AssemblyName>OOPTekrar</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|anycpu' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExternalConsole>true</ExternalConsole>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|anycpu' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExternalConsole>true</ExternalConsole>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="ErrorLogger.cs" />
+    <Compile Include="Foundations\Arac.Fields.cs" />
+    <Compile Include="Foundations\Arac.Methods.cs" />
+    <Compile Include="Foundations\IArac.cs" />
+    <Compile Include="Foundations\IMotorlu.cs" />
+    <Compile Include="Foundations\Indexer.cs" />
+    <Compile Include="Foundations\Motorlu.cs" />
+    <Compile Include="Foundations\Motorsuz.cs" />
+    <Compile Include="DbMigration.cs" />
+    <Compile Include="Integration.cs" />
+    <Compile Include="AnimalsOOP\Animal.cs" />
+    <Compile Include="AnimalsOOP\Person.cs" />
+    <Compile Include="AnimalsOOP\GoldFish.cs" />
+    <Compile Include="AnimalsOOP\Dog.cs" />
+    <Compile Include="AnimalsOOP\Walkable.cs" />
+    <Compile Include="AnimalsOOP\Swimable.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="tahta.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Foundations\" />
+    <Folder Include="AnimalsOOP\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,6 @@
+﻿2 class yazilacak
+1. class adi Stop
+2. class adi Start
+Timespan degisken tanimlanacak
+Program.cs icinden once Start'i sonra da Stop
+ikisi arasindaki zaman farkini gosterelim
